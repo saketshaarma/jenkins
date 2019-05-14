@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('---clean---'){
             steps {
-                efcho "Hello India"
+                echo "Hello India"
             }
         }
         stage('---Build---'){
@@ -27,7 +27,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            echo 'This will run only if successful'
+            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "saketbsharma@gmail.com";
         }
         failure {
            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "saketbsharma@gmail.com";
