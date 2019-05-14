@@ -16,5 +16,10 @@ pipeline {
             echo "I love my country"
           }
         }
+        stage('---Completion---'){
+          steps {
+            echo "I love its people"
+          }
+        }
     }
 }
