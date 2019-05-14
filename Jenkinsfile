@@ -1,15 +1,15 @@
-pipeline{
+pipeline {
 agent any
   stages {
     stage('----clean----'){
-      steps{
+      steps {
         echo "Hello India"
   }
   }
   }
   stages {
     stage('---Build---'){
-      steps{
+      steps {
         echo "This is my country"
   }
   }
@@ -17,7 +17,7 @@ agent any
 }
   stages {
     stage('---deployment---'){
-      steps{
+      steps {
         echo "I love my country"
   }
   }
