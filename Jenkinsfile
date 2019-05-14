@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('---clean---'){
             steps {
-                echo "Hello India"
+                efcho "Hello India"
             }
         }
         stage('---Build---'){
