@@ -30,7 +30,7 @@ pipeline {
             echo 'This will run only if successful'
         }
         failure {
-            mailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            mailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test', to: "saketbsharma@gmail.com";
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
