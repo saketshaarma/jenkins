@@ -6,5 +6,14 @@ agent any
         echo "Hello India"
   }
   }
+  stage('---Build---'){
+      steps{
+        echo "This is my country"
+  }
+  stage('---deployment---'){
+      steps{
+        echo "I love my country"
+  }
+  }
   }
 }
